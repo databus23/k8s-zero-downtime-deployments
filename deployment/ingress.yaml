@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    disco: "true"
+    kubernetes.io/tls-acme: "true"
+  name: test-app
+spec:
+  tls:
+  - hosts:
+      - test-app.qa-de-1.cloud.sap
+    secretName: test-app
+  rules:
+  - host: test-app.qa-de-1.cloud.sap
+    http:
+      paths:
+      - backend:
+          serviceName: test-app
+          servicePort: 80
+        path: /

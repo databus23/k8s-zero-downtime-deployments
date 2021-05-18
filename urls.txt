@@ -1,0 +1,3 @@
+POST https://test-app.qa-de-1.cloud.sap
+POST https://test-app.qa-de-1.cloud.sap?wait=5
+POST https://test-app.qa-de-1.cloud.sap?wait=10
