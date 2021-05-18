@@ -7,8 +7,4 @@ metadata:
 spec:
   template:
     spec:
-      containers:
-      - name: test-app
-        args:
-        - -graceful-shutdown-timeout=11s
-
+      terminationGracePeriodSeconds: 60

@@ -16,7 +16,7 @@ spec:
         app: test-app
     spec:
       containers:
-      - image: keppel.eu-de-1.cloud.sap/ccloud/zero-downtime-test-webserver:0.1.4
+      - image: keppel.eu-de-1.cloud.sap/ccloud/zero-downtime-test-webserver:0.1.5
         name: test-app
         ports:
           - containerPort: 6969
