@@ -56,7 +56,7 @@ Fix: `kustomize edit add patch patches/pre-stop-hook.yaml`
 
 To prevent loosing requests when performing a deployment the following things needs to be considered:
 
-* Readiness Probe that siganls when the container is ready to receive traffic
+* Readiness Probe that signals when the container is ready to receive traffic
 * Graceful shutdown on `TERM` signal that delays process exit until in-flight requests are completed. Timeout needs to be `> max request time`
-* `prepStop` hook that waits for ~ 15 seconds before shutting down the listener socket
-* Pods `terminationGracePeriodSeconds` needs to be `> max request time + pre stop time (15 seconds)`  
+* `PreStop` hook that waits for ~ 15 seconds before shutting down the listener socket
+* Pods `terminationGracePeriodSeconds` needs to be `> max request time + pre stop time (15 seconds)`
